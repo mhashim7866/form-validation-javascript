@@ -9,7 +9,6 @@ function clearErrors(){
 
 }
 function seterror(id, error){
-    //sets error inside tag of id 
     element = document.getElementById(id);
     element.getElementsByClassName('formerror')[0].innerHTML = error;
 
@@ -31,8 +30,15 @@ function validateForm(){
     }
 
     var email = document.forms['myForm']["femail"].value;
-    if (email.length>15){
+    if (email.length > 15){
         seterror("email", "*Email length is too long");
+        returnval = false;
+    }
+
+    var email = document.forms['myForm']["femail"].value;
+    if (email.length > 15){
+        "^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"; 
+        seterror("email", "*Email is invalid");
         returnval = false;
     }
 
@@ -46,6 +52,13 @@ function validateForm(){
     if (password.length < 6){
 
         seterror("pass", "*Password should be atleast 6 characters long!");
+        returnval = false;
+    }
+
+    var password = document.forms['myForm']["fpass"].value;
+    if (password.length > 8){
+
+        seterror("pass", "*Password should be atleast 8 less than characters long!");
         returnval = false;
     }
 

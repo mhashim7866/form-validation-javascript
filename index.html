@@ -12,25 +12,25 @@
 
 <body>
     <h1>Welcome to the best form on Internet!</h1>
-    <form aciton ="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+    <form  name="myForm" onsubmit="return validateForm()" method="post">
         <div class="formdesign" id="name">
-            Name: <input type="text" name="fname" required><b><span class="formerror"> </span></b>
+            <label>name:</label> <input type="text" name="fname" ><b><span class="formerror"> </span></b>
         </div>
 
         <div class="formdesign" id="email">
-            Email: <input type="email" name="femail" required><b><span class="formerror"> </span></b>
+            <label>Email:</label><input type="text" name="femail" ><b><span class="formerror"></span></b>
         </div>
 
         <div class="formdesign" id="phone">
-            Phone: <input type="phone" name="fphone" required><b><span class="formerror"></span></b>
+            <label>Phone:</label><input type="number" name="fphone" ><b><span class="formerror"></span></b>
         </div>
 
         <div class="formdesign" id="pass">
-            Password: <input type="password" name="fpass" required><b><span class="formerror"></span></b>
+            <label>Password:</label> <input type="password" name="fpass" ><b><span class="formerror"></span></b>
         </div>
 
         <div class="formdesign" id="cpass">
-            Confirm Password: <input type="password" name="fcpass" required><b><span class="formerror"></span></b>
+            <label>Confirm password:</label> <input type="password" name="fcpass" ><b><span class="formerror"></span></b>
         </div>
 
         <input class="but" type="submit" value="Submit">
